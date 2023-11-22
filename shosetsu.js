@@ -162,7 +162,6 @@ class Shosetsu {
                 element.style.lineHeight = "1.8";
                 element.style.textAlign = "justify";
                 element.style.fontSize = "1.125rem";
-                element.style.overflow = "hidden";
                 element.style.wordBreak = "break-all";
             });
         }
