@@ -296,6 +296,11 @@ class Shosetsu {
                     this.#config.function?.getChapterDetail(nextPageDoc) ??
                     nextPageDoc.querySelector(this.#config.selector.read_chapterDetail)
                 );
+            const pageNav = nextPageDoc.querySelector(this.#config.selector.pageNav);
+            document
+                .querySelector(this.#config.selector.readContentSet)
+                .appendChild(pageNav);
+            this.#scrollObserver.observe(pageNav);
             this.init();
             const chapterDetails = document.querySelectorAll(this.#config.selector.read_chapterDetail);
             if (chapterDetails.length > 0) {
