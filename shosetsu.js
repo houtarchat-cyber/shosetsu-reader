@@ -23,6 +23,7 @@ class Shosetsu {
      * @typedef {object} Config The configuration object.
      * @property {Selector} selector The selector object containing various CSS selectors.
      * @property {Functions} function The function object containing various functions.
+     * @property {string} encoding A specific character encoding, like utf-8, iso-8859-2, koi8, cp1261, gbk, etc.
      */
 
     /**
@@ -33,7 +34,6 @@ class Shosetsu {
      * @property {string} read_chapterDetail The CSS selector for the container that holds the text.
      * @property {string[]} removeList An array of CSS selectors for elements to be removed.
      * @property {string} pageNav The CSS selector for the page navigation container.
-     * @property {string} encoding A specific character encoding, like utf-8, iso-8859-2, koi8, cp1261, gbk, etc.
      */
 
     /**

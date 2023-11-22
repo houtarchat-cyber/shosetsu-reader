@@ -181,6 +181,7 @@ The configuration object.
 | --- | --- | --- |
 | selector | [<code>Selector</code>](#Selector) | The selector object containing various CSS selectors. |
 | function | [<code>Functions</code>](#Functions) | The function object containing various functions. |
+| encoding | <code>string</code> | A specific character encoding, like utf-8, iso-8859-2, koi8, cp1261, gbk, etc. |
 
 <a name="Selector"></a>
 
@@ -198,7 +199,6 @@ The selector object containing various CSS selectors.
 | read_chapterDetail | <code>string</code> | The CSS selector for the container that holds the text. |
 | removeList | <code>Array.&lt;string&gt;</code> | An array of CSS selectors for elements to be removed. |
 | pageNav | <code>string</code> | The CSS selector for the page navigation container. |
-| encoding | <code>string</code> | A specific character encoding, like utf-8, iso-8859-2, koi8, cp1261, gbk, etc. |
 
 <a name="Functions"></a>
 
