@@ -27,11 +27,12 @@ const reader = new Shosetsu({
             const contentElement = nextPageDoc.querySelector("#content");
             contentElement.innerHTML = $.base64.decode(contentElement.innerHTML.trim());
             [
+                ["df", "对方"],
                 ["dh", "，"],
-                ["wenhao", "？"],
                 ["hao1", "”"],
                 ["hao2", "！"],
-                ["hao3", "。"]
+                ["hao3", "。"],
+                ["wenhao", "？"],
             ].forEach(([imgSrc, replacement]) => {
                 const regexPattern = new RegExp(`<img src=["']http://www.6gxs.net/img/${imgSrc}.png["'] height=["']26["'] ?/?>`, 'g');
                 contentElement.innerHTML = contentElement.innerHTML.replaceAll(regexPattern, replacement);
