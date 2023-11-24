@@ -269,7 +269,7 @@ class Shosetsu {
             return;
         }
         this.#isLoadingPage = true;
-        const nextPage = this.#config.function?.getNextPage(this.#currentPage) ?? (() => {
+        const nextPage = this.#config.function?.getNextPage?.(this.#currentPage) ?? (() => {
             let nextPage = this.#currentPage.substring(0, this.#currentPage.lastIndexOf("/") + 1);
             const currentPageNumber = this.#currentPage.match(/\d+\.html/)[0];
             const nextPageNumber = parseInt(currentPageNumber) + 1;
@@ -293,7 +293,7 @@ class Shosetsu {
                 .querySelector(this.#config.selector.readDetail)
                 .append(
                     nextPageDoc.querySelector(this.#config.selector.title),
-                    this.#config.function?.getChapterDetail(nextPageDoc) ??
+                    this.#config.function?.getChapterDetail?.(nextPageDoc) ??
                     nextPageDoc.querySelector(this.#config.selector.read_chapterDetail)
                 );
             const pageNav = nextPageDoc.querySelector(this.#config.selector.pageNav);
