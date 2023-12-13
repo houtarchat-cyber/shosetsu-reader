@@ -321,6 +321,13 @@ class Shosetsu {
         } catch (error) {
             await this.forceGetNextPage();
         }
+
+        Array.from(document.querySelector(this.#config.selector.readDetail).childNodes)
+            .forEach(e => {
+                if (e.nodeName == '#text') {
+                    e.remove();
+                }
+            });
     }
 
     /**
